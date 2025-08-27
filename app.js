@@ -68,10 +68,10 @@ const sessionOptions = {
     },  
 };
 
-app.get("/", (req, res) => {
-  res.redirect("/listing");
-});
-
+ app.get("/",(req,res) => {
+     console.log("Welcome to Home page");
+     res.send("Hi i am root");
+ })
 
 app.use(session(sessionOptions));
 app.use(flash());
